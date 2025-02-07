@@ -1,0 +1,19 @@
+---
+import Navbar from './Navbar.astro';
+import About from './About.astro';
+import Projects from './Projects.astro';
+import Experience from './Experience.astro';
+import Contact from './Contact.astro';
+---
+
+<main class="min-h-screen bg-white dark:bg-gray-900 transition-colors">
+    <Navbar />
+    <div class="pt-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"> <!-- Contenedor centrado con padding responsivo -->
+        <div class="space-y-20"> <!-- Espaciado vertical entre secciones -->
+            <About />
+            <Projects />
+            <Experience />
+            <Contact />
+        </div>
+    </div>
+</main>

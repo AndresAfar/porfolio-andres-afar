@@ -1,0 +1,84 @@
+---
+const contactLinks = [
+    {
+        platform: "Email",
+        link: "mailto:afar2503@gmail.com",
+        user: "afar2503@gmail.com",
+        icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />`
+    },
+    {
+        platform: "LinkedIn",
+        link: "https://www.linkedin.com/in/andres-alfonso-rojas/",
+        user: "Perfil de LinkedIn",
+        icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z M2 9h4v12H2z M4 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />`
+    },
+    {
+        platform: "GitHub",
+        link: "https://github.com/AndresAfar",
+        user: "AndresAfar",
+        icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />`
+    }
+];
+---
+
+<section id="contact" class="py-20 dark:bg-gray-900">
+    <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4 dark:text-white">Contacto</h2>
+            <p class="text-gray-600 dark:text-gray-400 text-lg">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            {contactLinks.map(({ platform, link, user, icon }) => (
+                <a 
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group flex flex-col items-center p-8 rounded-xl bg-white dark:bg-gray-800 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                >
+                    <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            class="h-8 w-8 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300" 
+                            fill="none" 
+                            viewBox="0 0 24 24" 
+                            stroke="currentColor"
+                        >
+                            <Fragment set:html={icon} />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 dark:text-white">{platform}</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-center group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                        {user}
+                    </p>
+                </a>
+            ))}
+        </div>
+
+        <div class="mt-16 text-center">
+            <p class="text-gray-600 dark:text-gray-400 mb-6">
+                También puedes escribirme directamente a mi correo
+            </p>
+            <a 
+                href="mailto:afar2503@gmail.com"
+                class="inline-flex items-center gap-2 px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors duration-300"
+            >
+                Enviar mensaje
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    class="h-5 w-5" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                >
+                    <path 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        stroke-width="2" 
+                        d="M14 5l7 7m0 0l-7 7m7-7H3" 
+                    />
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>

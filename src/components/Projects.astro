@@ -1,0 +1,97 @@
+---
+import proorddo from '../images/proorddo-C0ekM86J.png';
+import FreRail from '../images/imgFreeRail-CFRmleET.webp';
+import Textify from '../images/image-textifyjs.png';
+
+const projects = [
+    {
+        title: "TextifyJS",
+        description: "Editor de texto enriquecido ligera y personalizable para aplicaciones web modernas.",
+        image: Textify,
+        link: "https://github.com/AndresAfar/TextifyJS#readme",
+        tags: ["JavaScript", "Tailwind"]
+    },
+    {
+        title: "FreeRail",
+        description: "Aplicación web de búsqueda de spots y skateparks para práctica de deportes extremos.",
+        image: FreRail,
+        link: "https://github.com/AndresAfar/FreeRail",
+        tags: ["Astro", "Tailwind"]
+    },
+    {
+        title: "OrderPOS",
+        description: "Proyecto final de grado SENA de Sistema POS para toma de pedidos de restaurante.",
+        image: proorddo,
+        link: "https://github.com/AndresAfar/orddoOld",
+        tags: ["PHP", "JavaScript", "Bootstrap", "MySql"]
+    },
+    //{
+    //    title: "EventsView",
+    //    description: "Aplicación web de visualización, creación y modificación de eventos.",
+    //    image: "proyecto1",
+    //    link: "#",
+    //    tags: ["React", "Node.js", "MongoDB"]
+    //},
+];
+---
+
+<section id="projects" class="py-20 dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-2 dark:text-white">Proyectos</h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-12 text-lg">Algunos de mis trabajos más recientes</p>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project) => (
+                <article class="group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="relative">
+                        <img 
+                            src={typeof project.image === "string" ? project.image : project.image.src} 
+                            alt={project.title} 
+                            class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" 
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 dark:text-white">
+                            {project.title}
+                        </h3>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            {project.description}
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            {project.tags.map((tag) => (
+                                <span class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full">
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+                        
+                        <a 
+                            href={project.link} 
+                            class="inline-flex items-center gap-2 text-black dark:text-white font-medium hover:gap-3 transition-all"
+                        >
+                            Ver proyecto
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                class="h-5 w-5" 
+                                fill="none" 
+                                viewBox="0 0 24 24" 
+                                stroke="currentColor"
+                            >
+                                <path 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round" 
+                                    stroke-width="2" 
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" 
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            ))}
+        </div>
+    </div>
+</section>

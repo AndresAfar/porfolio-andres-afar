@@ -1,0 +1,30 @@
+---
+const experiences = [
+    {
+        company: "Windows Channel",
+        position: "Desarrollador Web Jr",
+        period: "2024 - Presente",
+        description: "Responsable de mantenimiento y mejorar en el rendimiento de aplicativos y herramientas de la empresa."
+    },
+    {
+        company: "Enel Colombia",
+        position: "Analista de Datos",
+        period: "2023 - 2024",
+        description: "Responsable de automatizar tareas de procesamiento de información, detectar cuellos de botella y fallas en el flujo de datos en el área de Recursos Humanos. Diseñar reportes y dashboards para mejorar la eficiencia y facilitar la toma de decisiones del área. Contribuir al óptimo funcionamiento de los procesos organizativos."
+    },
+];
+---
+<section id="experience" class="py-20">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 dark:text-white">Experiencia</h2>
+        <div class="space-y-8">
+            {experiences.map(exp => (
+                <div class="border-l-4 border-black dark:border-white pl-4">
+                    <h3 class="text-xl font-bold dark:text-white">{exp.position}</h3>
+                    <p class="text-gray-600 dark:text-gray-400">{exp.company} | {exp.period}</p>
+                    <p class="mt-2 dark:text-gray-300">{exp.description}</p>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
