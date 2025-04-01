@@ -9,13 +9,44 @@ const { title = "Andres Alfonso - Portfolio" } = Astro.props;
 ---
 
 <!doctype html>
-<html class="dark" lang="en">
+<html class="dark" lang="es">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image" href="/src/assets/images/AF-icon-qIFePnN9.png" />
-		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link rel="icon" type="image" href="/AF-icon-qIFePnN9.png" />
+		<link rel="apple-touch-icon" href="/AF-icon-qIFePnN9.png">
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://andresalfonso.com/" />
+		<meta charset="UTF-8" />
+		<meta name="description" content="Portafolio de Andres Alfonso - Desarrollador Web Fullstack especializado en JavaScript, React, Node.js, Laravel y más. Descubre mis proyectos y habilidades." />
+		<meta name="keywords" content="desarrollador web, fullstack, javascript, react, node.js, portfolio, Andres Alfonso, desarrollo web" />
+		<meta name="author" content="Andres Alfonso" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- Open Graph / Facebook Meta Tags -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://andresalfonso.com/" />
+		<meta property="og:title" content="Andres Alfonso - Desarrollador Web Fullstack" />
+		<meta property="og:description" content="Portafolio profesional de Andres Alfonso, desarrollador web fullstack con experiencia en proyectos interactivos y soluciones digitales innovadoras." />
+		<meta property="og:image" content="https://andresalfonso.com/og-image.png" />
+		<meta property="og:image:alt" content="Andres Alfonso - Desarrollador Web" />
+		<meta property="og:site_name" content="Portfolio de Andres Alfonso" />
+		<meta property="og:locale" content="es_ES" />
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="https://andresalfonso.com/" />
+		<meta name="twitter:title" content="Andres Alfonso - Desarrollador Web Fullstack" />
+		<meta name="twitter:description" content="Portafolio profesional de Andres Alfonso, desarrollador web fullstack con experiencia en proyectos interactivos y soluciones digitales innovadoras." />
+		<meta name="twitter:image" content="https://andresalfonso.com/og-image.png" />
+		<meta name="twitter:image:alt" content="Andres Alfonso - Desarrollador Web" />
+
+		<!-- Additional SEO Tags -->
+		<meta name="robots" content="index, follow" />
+		<meta name="googlebot" content="index, follow" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#000000" />
+
 	</head>
 	<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors">
 		<slot />

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://andresalfonso.com/sitemap.xml
