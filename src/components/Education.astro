@@ -1,0 +1,39 @@
+---
+const education = [
+    {
+        institution: "Corporación Unificada de Educación Superior CUN",
+        degree: "Ingeniería de Sistemas",
+        period: "2023 - 2025",
+        description: "Desarrollo de soluciones de alta complejidad, arquitectura de sistemas y gestión estratégica de la información."
+    },
+    {
+        institution: "Servicio Nacional de Aprendizaje SENA",
+        degree: "Tecnología en Analisis y Desarrollo de Sistemas de Información ADSI",
+        period: "2022 - 2024",
+        description: "Análisis, diseño y desarrollo de sistemas integrales, cubriendo todo el ciclo de vida del software y gestión de bases de datos."
+    },
+    {
+        institution: "Universidad Autónoma de Bucaramanga UNAB",
+        degree: "Técnico Laboral en desarrollo de Aplicaciones Móviles",
+        period: "2021 - 2022",
+        description: "Diseño e implementación de aplicaciones móviles modernas, priorizando la usabilidad y la eficiencia técnica."
+    },
+];
+---
+
+<section id="education" class="py-20">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-2 dark:text-white">Educación</h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-12 text-lg">Formación académica y certificaciones</p>
+        
+        <div class="space-y-8">
+            {education.map(edu => (
+                <div class="border-l-4 border-black dark:border-white pl-4">
+                    <h3 class="text-xl font-bold dark:text-white">{edu.degree}</h3>
+                    <p class="text-gray-600 dark:text-gray-400">{edu.institution} | {edu.period}</p>
+                    <p class="mt-2 dark:text-gray-300">{edu.description}</p>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
